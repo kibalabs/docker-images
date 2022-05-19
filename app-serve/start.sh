@@ -11,4 +11,4 @@ for assignment in $(env | grep "^KRT_"); do
   echo "GLOBAL.$name = \"$value\";" >> /usr/share/nginx/html/runtimeConfig.js
 done
 
-nginx -g 'daemon off;'
+exec nginx -g 'daemon off;'
